@@ -47,6 +47,7 @@ impl ThreadPool {
     }
 }
 
+// This will destroy the pool.
 impl Drop for ThreadPool {
     fn drop(&mut self) {
         drop(self.sender.take());

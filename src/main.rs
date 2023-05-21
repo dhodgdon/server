@@ -8,7 +8,10 @@ use std::{
 };
 
 fn main() {
+    // Create an instance of TcpListener to listen on a port.
     let listener = TcpListener::bind("127.0.0.1:7878").unwrap(); 
+
+    // Create a pool of threads to manage multiple incoming requests concurrently.
     let pool = ThreadPool::new(10);
 
     for stream in listener.incoming() // .take(6) 
@@ -27,6 +30,7 @@ fn handle_connection(mut stream: TcpStream) {
     let buf_reader = BufReader::new(&mut stream);
     let request_line = buf_reader.lines().next().unwrap().unwrap();
 
+    // Make GET requests to various IP addresses.
     let (status_line, filename) = match &request_line[..] {
         "GET / HTTP/1.1" => ("HTTP/1.1 200 OK", "hello_world.html"),
         // "GET /sleep HTTP/1.1" => {
