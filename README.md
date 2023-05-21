@@ -4,7 +4,7 @@ This is a basic multi-threaded server program in Rust. There is also a section u
 
 As Rust is becoming more and more prevalent in the software industry, I decided it would be valuable to learn how to program with it. I also chose this project with the intent to learn how to program a web server from scratch. To accomplish this, I followed the tutorial in [chapter 20 of The Rust Programming Language book](https://doc.rust-lang.org/book/ch20-00-final-project-a-web-server.html).
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/ati1YyF3qNI)
 
 # Development Environment
 
